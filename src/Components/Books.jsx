@@ -39,24 +39,24 @@ function Books() {
                                 {book.description}</p>
                             <div className="book-meta">
                                 <span >
-                                    {
-                                        user.role === "user" ? (
-                                            <button className="bg-blue-400 hover:bg-blue-500 active:bg-blue-800 p-1 rounded-lg " onClick={() => navigate(`/bets/${book._id}`)}>Place Bet</button>
-                                        ) : (<>
-                                            <button className="bg-blue-400 hover:bg-blue-500 active:bg-blue-800 p-1 rounded-lg mr-2" onClick={() => navigate(`/betslist/${book._id}`)}>See Bets list</button>
-                                            <button className="bg-red-500 hover:bg-red-600 active:bg-red-800 p-1 rounded-lg" onClick={() => {
-                                                const deleteBook = async () => {
-                                                    try {
-                                                        await api.delete(`/books/delete/${book._id}`);
-                                                        setBooks((prevBooks) => prevBooks.filter((b) => b._id !== book._id));
-                                                    } catch (err) {
-                                                        console.error(err);
-                                                    }
-                                                };
-                                                deleteBook();
-                                            }}>Delete</button>
-                                        </>
-                                        )
+                                    {user &&
+                                        (user.role === "user") ? (
+                                        <button className="bg-blue-400 hover:bg-blue-500 active:bg-blue-800 p-1 rounded-lg " onClick={() => navigate(`/bets/${book._id}`)}>Place Bet</button>
+                                    ) : (<>
+                                        <button className="bg-blue-400 hover:bg-blue-500 active:bg-blue-800 p-1 rounded-lg mr-2" onClick={() => navigate(`/betslist/${book._id}`)}>See Bets list</button>
+                                        <button className="bg-red-500 hover:bg-red-600 active:bg-red-800 p-1 rounded-lg" onClick={() => {
+                                            const deleteBook = async () => {
+                                                try {
+                                                    await api.delete(`/books/delete/${book._id}`);
+                                                    setBooks((prevBooks) => prevBooks.filter((b) => b._id !== book._id));
+                                                } catch (err) {
+                                                    console.error(err);
+                                                }
+                                            };
+                                            deleteBook();
+                                        }}>Delete</button>
+                                    </>
+                                    )
                                     }
                                 </span>
                                 <span className="book-price">MRP: ₹{book.maximumBet}</span>
