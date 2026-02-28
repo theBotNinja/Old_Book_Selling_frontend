@@ -18,12 +18,13 @@ export default function MyBets() {
     }, [user._id]);
     console.log(bets)
     return (<>
-        <div style={{ margin: "15%" }}>
+        <div style={{ margin: "10%" }}>
+            <h1 className='text-2xl font-bold'>Bid List</h1>
             {bets.map((bet) => (
                 <div key={bet._id} style={{ margin: "1%", border: "1px solid #555555ff", padding: "1%", borderRadius: "10px", backgroundColor: bet.status === "won" ? "#d0ffe1ff" : "#fdf7ffff" }}>
-                    <p>Book: {bet.BookName}</p>
-                    <p>Amount: {bet.BetAmount}</p>
-                    <p>Status: {bet.status}</p>
+                    <p>Book: <span className='font-bold'>{bet.BookName}</span></p>
+                    <p>Amount: <span className='font-bold'>₹{bet.BetAmount}</span></p>
+                    <p>Status: <span className='font-bold'>{bet.status}</span></p>
                 </div>
             ))}
         </div>

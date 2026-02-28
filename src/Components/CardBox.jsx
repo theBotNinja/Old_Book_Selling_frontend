@@ -17,15 +17,14 @@ export default function CardBox(props) {
             fetchUserDetails();
 
         }} className="bet-card p-2 m-2 rounded-lg bg-slate-200">
-            <h3>{props.userid}</h3>
-            <p className="bet-author">MRP: ₹{props.betamount}
-                <br />
-                {props.bookname}</p>
+            <h3> User ID : <span className='font-bold'>{props.userid}</span></h3>
+            <p className="bet-author">Bid Amount :<span className='font-bold'> ₹{props.betamount}</span>
+            </p>
             {userdetails && (
                 <div>
-                    <p>{userdetails.name}</p>
-                    <p>{userdetails.email}</p>
-                    <p>{userdetails.mobileNumber}</p>
+                    <p>Name: {userdetails.name}</p>
+                    <p>Email: {userdetails.email}</p>
+                    <p>Mobile Number: {userdetails.mobileNumber}</p>
                 </div>
             )}
         </div>

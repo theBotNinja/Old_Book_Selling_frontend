@@ -68,7 +68,7 @@ function Navbar() {
                 <NavLink to="/" className="mobile-link" onClick={() => setMenuOpen(false)}>Home</NavLink>
                 <NavLink to="/books" className="mobile-link" onClick={() => setMenuOpen(false)}>Books</NavLink>
                 {isAuthenticated && role === 'user' && (
-                    <NavLink to="/bets" className="mobile-link" onClick={() => setMenuOpen(false)}>Bets</NavLink>
+                    <NavLink to="/bets" className="mobile-link" onClick={() => setMenuOpen(false)}>Bidding</NavLink>
                 )}
                 {isAuthenticated && role === 'admin' && (
                     <NavLink to="/add-books" className="mobile-link" onClick={() => setMenuOpen(false)}>Add Books</NavLink>

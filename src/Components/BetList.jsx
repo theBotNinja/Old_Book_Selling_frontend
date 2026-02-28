@@ -21,7 +21,7 @@ export default function BetList() {
     return (
         <div className='m-8 p-10'>
             <h1>BetList</h1>
-            <div className="bets-grid m-2 p-4">
+            <div className="flex flex-col m-2 p-4">
                 {bets.map((bet) => (
                     <CardBox key={bet._id} userid={bet.User} betamount={bet.BetAmount} bookname={bet.bookName} />
                 ))}
