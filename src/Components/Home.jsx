@@ -12,12 +12,15 @@ function Home() {
             {/* Content */}
             <div className="hero-content">
                 <h1 className="hero-title">
-                    Discover <span className="highlight">Timeless</span> Treasures
+                    Giving <span className="highlight">Books</span> a Second Life
                 </h1>
                 <p className="hero-subtitle">
-                    Rare editions, vintage classics, and forgotten gems — all waiting for a new home.
+                    You can explore books without logging in. When you're ready to buy or place a bid, simply create an account and get started.
                 </p>
-                <a href="#books" className="hero-cta">
+                <p className="hero-subtitle">
+                    Place a bid within the allowed range. The highest valid bid wins when the listing closes.
+                </p>
+                <a href="/books" className="hero-cta">
                     Browse Collection
                     <span className="cta-arrow">→</span>
                 </a>

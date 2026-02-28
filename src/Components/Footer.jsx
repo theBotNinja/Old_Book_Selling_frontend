@@ -4,8 +4,8 @@ function Footer() {
             <div className="footer-container">
                 <p className="footer-text">
                     Need help? Call us at{' '}
-                    <a href="tel:+911234567890" className="footer-phone">
-                        📞 +91 12345 67890
+                    <a href="" className="footer-phone">
+                        📞 +91 8960191365
                     </a>
                 </p>
                 <p className="footer-copyright">

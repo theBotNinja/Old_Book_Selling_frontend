@@ -29,7 +29,7 @@ function Books() {
             <div className="books-grid">
                 {books.map((book) => (
                     <div key={book._id} className="book-card">
-                        <div className={`book-card-cover`} style={{ backgroundImage: `url(${api.getUri()}${book.image})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
+                        <div className={`book-card-cover`} style={{ backgroundImage: `url(${book.image})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
                             {book.image === "link" ? <span className="book-emoji" >📖</span> : <span ></span>}
                         </div>
                         <div className="book-card-info">

@@ -18,8 +18,7 @@ function Navbar() {
             <div className="navbar-container">
                 {/* Brand */}
                 <NavLink to="/" className="navbar-brand" onClick={() => setMenuOpen(false)}>
-                    <span className="brand-icon">📚</span>
-                    <span className="brand-text">The Book Nook</span>
+                    <span className="brand-text">♖ Book Nook</span>
                 </NavLink>
 
                 {/* Desktop Nav Links */}
