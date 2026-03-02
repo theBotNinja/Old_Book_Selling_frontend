@@ -61,7 +61,7 @@ function Books() {
                                     )
                                     }
                                 </span>
-                                <span className="book-price">Starts At: ₹{book.maximumBet}</span>
+                                <span className="book-price">Starts At: ₹{book.minimumBet}</span>
                             </div>
                         </div>
                     </div>
